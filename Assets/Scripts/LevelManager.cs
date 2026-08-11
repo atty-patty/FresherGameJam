@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     { 
         for (int i = 1; i < levelSprits.Length; i++)
         {
-            if (i < levelsCompleted)
+            if (i < levelsCompleted+1)
             {
                 levelSprits[i].interactable = true;
             }
@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
         {
             toolTip.gameObject.SetActive(true);
         }
-        else if (levelsCompleted >= 3)
+        else if (levelsCompleted == 4)
         {
             toolTip.gameObject.SetActive(true);
             toolTip.text = "Game Completed!";
